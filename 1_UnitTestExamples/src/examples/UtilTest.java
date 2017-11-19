@@ -40,8 +40,6 @@ public class UtilTest {
     public void tearDown() {
     }
 
-
-
     @Test
     public void testAvgNormal() {
         // Arrange

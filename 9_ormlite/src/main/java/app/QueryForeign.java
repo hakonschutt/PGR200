@@ -45,7 +45,7 @@ public class QueryForeign {
 		List<Order> results =
 				orderDao.queryBuilder().where().
 				eq("account_id", account.getId()).query();
-		System.out.println("Antall:"+results.size());
+		System.out.println("Antall: "+results.size());
 		for (Order order : results) {
 			System.out.println("Order:"+order.toString());
 		}

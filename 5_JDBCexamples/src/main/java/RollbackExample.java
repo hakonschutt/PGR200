@@ -70,16 +70,14 @@ public class RollbackExample {
              ResultSet res = stmt
                      .executeQuery("select code, name, population from country_copy"
                              + " where code= 'NOR'")) {
-            System.out
-                    .println("------------------------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------------");
             if(!res.next()) {
                 throw new SQLException("Norway not found for code='NOR'");
             }
             System.out.printf("%-20S", res.getString("code"));
             System.out.printf("%-20S", res.getString("name"));
             System.out.printf("%-20S", res.getInt("population"));
-            System.out
-                    .println("------------------------------------------------------------------------");
+            System.out.println("------------------------------------------------------------------------");
             if(res.next()) {
                 throw new SQLException("Multiple countries found with code='NOR'");
             }
